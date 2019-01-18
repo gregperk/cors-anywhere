@@ -1,0 +1,20 @@
+{
+    "name": "CORS Anywhere",
+    "description": "A CORS-relaxing proxy.",
+    "repository": "https://github.com/gregperk/cors-anywhere.git",
+    "env": {
+      "CORSANYWHERE_WHITELIST": {
+        "description": "Whitelist of sites to accept requests from.",
+        "required": true,
+        "value": "https://boisesidemen.com,http://boisesidemen.com"
+      },
+      "HEROKU_FORCE_SSL": {
+        "description": "Require that all communications be via SSL.",
+        "required": true,
+        "value": "yes"
+      }
+    },
+    "buildpacks": [{
+        "url": "heroku/nodejs"
+    }]
+}
